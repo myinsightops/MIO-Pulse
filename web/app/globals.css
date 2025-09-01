@@ -1,9 +1,25 @@
 @import "tailwindcss";
 @theme {
-  /* Use Wix Madefor Text for our sans stack */
-  --font-sans: "Wix Madefor Text", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  --font-sans: "Wix Madefor Text", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+
+  /* Brand palette from Wix */
+  --color-brand: #57604B;       /* Primary / Olive */
+  --color-brand-foreground: #FFFFFF;
+
+  --color-accent: #7B886A;      /* Accent / Sage */
+  --color-accent-foreground: #0B0B0B;
+
+  --color-espresso: #53351A;    /* Dark / Espresso */
+  --color-sand: #E4C89E;        /* Tint / Sand */
+
+  /* Neutral ramp (can refine later) */
+  --color-muted-50:  oklch(98% 0 0);
+  --color-muted-100: oklch(96% 0 0);
+  --color-muted-200: oklch(92% 0 0);
+  --color-muted-300: oklch(88% 0 0);
+  --color-muted-800: oklch(30% 0 0);
 }
+
 
 /* optional subtle smoothing */
 html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
