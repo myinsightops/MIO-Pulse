@@ -1,7 +1,7 @@
 import "./globals.css"
-import Banner from "@/components/Banner/Banner"
-import Nav from "@/components/Nav/Nav"
-import Footer from "@/components/Footer/Footer"   // <-- add this import
+import Banner from "../components/Banner/Banner"
+import Nav from "../components/Nav/Nav"
+import Footer from "../components/Footer/Footer"
 
 export const metadata = {
   title: "MyInsightOps",
@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
       <body className="font-sans antialiased">
         <Nav />
         {children}
-        <Footer />       {/* keep Footer global */}
+        <Footer />
         <Banner />
       </body>
     </html>
