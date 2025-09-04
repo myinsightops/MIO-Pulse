@@ -7,9 +7,24 @@ on:
 jobs:
   check:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # Only run Node steps if we actually find a package.json in /web
+      - name: Set up Node 20
+        if: ${{ hashFiles('web/package.json') != '' }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - name: Install deps (npm ci) in /web
+        if: ${{ hashFiles('web/package.json') != '' }}
+        working-directory: web
+        run: npm ci
+
       - name: Verify CI wiring
-        run: echo "CI is wired up"
+        run: echo "CI is wired up (checkout + optional Node setup)"
