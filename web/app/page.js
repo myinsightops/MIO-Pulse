@@ -1,4 +1,4 @@
-// test branch protection
+﻿// test branch protection
 
 import Hero from "@/components/Hero/Hero"
 import Features from "@/components/Features/Features"
