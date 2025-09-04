@@ -14,8 +14,7 @@ export default function CTA() {
           <div className="flex items-center justify-center gap-3">
             <a
               href="/signup"
-              className="px-5 py-2.5 rounded-xl font-medium shadow-sm hover:shadow transition
-                         bg-black text-white"
+              className="px-5 py-2.5 rounded-xl font-medium shadow-sm hover:shadow transition bg-black text-white"
             >
               Get started free
             </a>
